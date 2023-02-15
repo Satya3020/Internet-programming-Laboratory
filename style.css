@@ -1,0 +1,14 @@
+.image{
+    border: 1em;
+    display: block;  
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 1px;
+}
+
+.headingt{
+    text-align: center;
+    color: rgb(190, 138, 138);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
