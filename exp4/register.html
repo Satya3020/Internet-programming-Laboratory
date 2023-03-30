@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <title>Registration page</title>
+</head>
+<body>
+    <div class="form">
+        <h1 class="textstyle" style="text-align: center; color: rgb(18, 100, 172)">
+            Register
+        </h1>
+        <form class="textstyle" style="color: rgb(164, 46, 159)" name="myform" method="post">
+            <table align="left" border="0" cellpadding="10">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" placeholder="min-3 max-40" id="user" name="user" required/></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" id="age" name="age" required/></td>
+                </tr>
+                <tr>
+                    <td>Aadhar number:</td>
+                    <td><input type="number" placeholder="enter without space" id="aadhar" name="aadhar" required/></td>
+                </tr>
+                <tr>
+                    <td>PAN number:</td>
+                    <td><input type="text" id="pan" name="pan" required/></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><input type="radio"/>Male<input type="radio"/>Female</td>
+                </tr>
+                <tr>
+                    <td>E-mail:</td>
+                    <td><input type="email" id="mail" name="mail" required/></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.:</td>
+                    <td><input type="number" id="mno" name="mno" required/></td>
+                </tr>
+                <tr>
+                    <td>Type of Account:</td>
+                    <td><select name="acc" id="acc" required>
+                        <option value="Savingsaccount">Savings account</option>
+                        <option value="Currentaccount">Current account</option>
+                        <option value="Jointaccount">Joint account</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>D.O.B:</td>
+                    <td><input type="date" id="dob" name="dob" required/></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea name="add" id="add" cols="20" rows="10" placeholder="enter your current address" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Upload your address proof</td>
+                    <td><input type="file" required /></td>
+                </tr>
+                <tr>
+                    <td>Upload your passport size photo</td>
+                    <td><input type="file" required /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Register" onclick="validate()"/>
+                    </td>
+                    <td><input type="reset" value="clear" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script lang="javascript">
+        function validate() {
+            var userid = document.getElementById("user").value;
+            var age = document.getElementById("age").value;
+            var aadharno = document.getElementById("aadhar").value;
+            var panno = document.getElementById("pan").value;
+            var email = document.getElementById("mail").value;
+            var phone = document.getElementById("mno").value;
+            var dob = document.getElementById("dob").value;
+            var userformat = /^([a-zA-Z0-9_-]){3,40}$/;
+            var pwdformat = /^([a-zA-Z0-9_-]){6,10}$/;
+            var mailformat = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+            var panformat = /^[A-Z]{5}\d{4}[A-Z]{1}$/;
+            if(!userid.match(userformat)) {
+                alert("Invalid username");
+            }
+            else if (age<=10)
+            {
+                alert("Not eligible");
+            }
+            else if (!email.match(mailformat)) {
+                alert("Invalid email");
+            }
+            else if (phone.length != 10) {
+                alert("Invalid mobile number");
+            }
+            else if (aadharno.length != 12) {
+                alert("Invalid aadhar number");
+            }
+            else if(!panno.match(panformat)){
+                alert("Invalid PAN number");
+            }
+            else {
+                window.open("success.html");
+            }
+        }
+    </script>
+</body>
+</html>
