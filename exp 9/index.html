@@ -96,14 +96,14 @@
 
     <script>
         function readXMLData() {
-            var xmlDocumentObject, id, name, Title, phone, noOfDays;
+            var xmlDocumentObject, id, name, title, phone, noOfDays;
             xmlDocumentObject = new XMLHttpRequest();
             xmlDocumentObject.open("GET","users.xml", false);
             xmlDocumentObject.send();
             xmlDocumentObject = xmlDocumentObject.responseXML;
             id = xmlDocumentObject.getElementsByTagName("userid");
             name = xmlDocumentObject.getElementsByTagName("username");
-            Title = xmlDocumentObject.getElementsByTagName("Title");
+            title = xmlDocumentObject.getElementsByTagName("Title");
             phone = xmlDocumentObject.getElementsByTagName("phone");
             noOfDays = xmlDocumentObject.getElementsByTagName("No_of_days");
                                                                     
@@ -119,7 +119,7 @@
             if (found == 1) {
                 displayDIV.innerHTML = "<table><tr><th></th><td>" + id[i].firstChild.nodeValue +
                     "</td></tr><tr><th>Name</th><td>" + name[i].firstChild.nodeValue +
-                    "</td></tr><tr><th>title</th><td>" + Title[i].firstChild.nodeValue +
+                    "</td></tr><tr><th>title</th><td>" + title[i].firstChild.nodeValue +
                     "</td></tr><tr><th>Mobile</th><td>" + phone[i].firstChild.nodeValue +
                     "</td></tr><tr><th>No. of Days</th><td>" + noOfDays[i].firstChild.nodeValue +
                     "</td></tr></table>";
