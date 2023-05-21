@@ -1,0 +1,83 @@
+<userlist>
+    <user>
+        <userid>usr01</userid>
+        <username>Satyavarssheni</username>
+        <Title>abc</Title>
+        <phone>9382121628</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr02</userid>
+        <username>lassya</username>
+        <Title>xyz</Title >
+        <phone>9111111111</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr03</userid>
+        <username>bob</username>
+        <Title >honey</Title >
+        <phone>9222222222</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr04</userid>
+        <username>sameera</username>
+        <Title >forest</Title >
+        <phone>9555555555</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr05</userid>
+        <username>tina</username>
+        <Title >encyclopedia</Title >
+        <phone>9666666666</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr06</userid>
+        <username>Peter</username>
+        <Title >casio</Title >
+        <phone>9846532158</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr07</userid>
+        <username>Dilip</username>
+        <Title >sherlock</Title >
+        <phone>9632542161</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr08</userid>
+        <username>Debby</username>
+        <Title >Holmes</Title >
+        <phone>8645976532</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr09</userid>
+        <username>Delphy</username>
+        <Title >Tale of two cities</Title >
+        <phone>9500126532</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+
+    <user>
+        <userid>usr10</userid>
+        <username>Harsshene</username>
+        <Title >Ikigai</Title >
+        <phone>9603040064</phone>
+        <No_of_days>3</No_of_days>
+    </user>
+</userlist>
+
+
