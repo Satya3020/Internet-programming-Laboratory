@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>User Login</title>
+</head>
+<body  style="background-image: url(library.jpg);">
+ <div class="form">
+	<h1 class="textstyle" style="text-align: center;">Login</h1>
+	<form class="textstyle" name="myform" method = "post">
+	        <table align="center" border="0" cellpadding="10">
+                <tr>
+                    <td>Username: </td> 
+                    <td><input type = "text" id="id" name="user"></td>
+			    </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type ="password" id="pwd" name="pass"></td>
+                </tr>
+                <tr>
+                    <td><input type = "submit" value="Login" onclick="validate()"></td>
+                    
+                    <td> <input type="reset" value="clear"></td>
+                </tr>      
+            </table>
+        </form>  
+        <form class="textstyle" style="text-align: center;" name="myform1" method = "post" action="register.html">
+            
+            <p >you don't have an account already, kindly register!</p>
+            <input type="submit" value="Register">
+        </form>
+	</div>
+</body>
+</html>
+
+<script lang="javascript">
+    function validate()
+    {
+        var userid = document.getElementById("id").value;
+        var passwd = document.getElementById("pwd").value;
+        var flag=0;
+        if(userid=="")
+        {
+            alert("Enter the username");
+            return false;
+        }
+        else if(passwd=="")
+        {
+            alert("Enter the password");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>

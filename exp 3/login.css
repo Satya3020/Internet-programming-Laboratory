@@ -1,0 +1,25 @@
+body
+{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-direction: column;
+}
+.form
+{
+	width: 35%;
+	border-radius: 2px;
+	margin: 120px auto;
+	padding:50px;
+}
+#button
+{
+	color: #fff;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.textstyle
+{
+	color:bisque;
+	font-style: normal;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+};

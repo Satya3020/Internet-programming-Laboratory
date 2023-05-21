@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>Registration page</title>
+</head>
+<body style="background-image: url(register.jpg);">
+ <div class="form">
+    <h1 class="textstyle" style="text-align: center; color: aliceblue;">Register</h1>
+    <form class="textstyle" style="color: aliceblue;" name="myform" method = "post" action="books.html">
+            <table align="left" border="0" cellpadding="10">
+                <tr>
+                    <td>Username: </td>
+                    <td><input type = "text" placeholder = "min-3 max-40" id="user" name="user"></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type ="password" placeholder = "min-6 max-10" id="pass" name="pass"></td>
+                </tr>
+                <tr>
+                    <td>E-mail: </td>
+                    <td><input type ="email" id="mail" name="mail"></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.: </td>
+                    <td><input type ="number" id="mno" name="mno"></td>
+                </tr>
+                <tr>
+                    <td>D.O.B:</td>
+                    <td><input type="date" id="dob" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><p><input type="radio" id="gen" name="gen">male
+                        <input type="radio" id="gen1" name="gen1">female
+                        </p>
+                    </td>  
+                </tr>
+                <tr>
+                    <td><input type = "checkbox" required></td>
+                    <td> I agree to the terms and conditions</td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Register" onclick="validate()"></td>
+                    <td> <input type="reset" value="clear"></td>
+                </tr>          
+            </table>
+        </form>  
+    </div>
+</body>
+</html>
+<script lang="javascript">
+ function validate()
+    {
+        var userid = document.getElementById("user").value;
+        var pwd = document.getElementById("pass").value;
+        var email = document.getElementById("mail").value;
+        var phone = document.getElementById("mno").value;
+        var dob = document.getElementById("dob").value;
+        var userformat = /^([a-zA-Z0-9_-]){3,40}$/;
+        var pwdformat = /^([a-zA-Z0-9_-]){6,10}$/;
+        var mailformat =  /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+        if((userid =="")||(pwd =="")||(email =="")||(phone =="")||(dob==""))
+        {
+            alert("Kindly enter all details");
+        }
+        else if(!userid.match(userformat))
+        {
+            alert("Invalid username");
+            return false;
+        }
+        else if(!pwd.match(pwdformat))
+        {
+            alert("Invalid password");
+            return false;
+        }
+        else if(!email.match(mailformat))
+        {
+            alert("Invalid email");
+            return false;
+        }
+        else if(phone.length!=10)
+        {
+            alert("Invalid mobile number");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>
+
+
+
+
+
+
+
